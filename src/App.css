@@ -23,6 +23,6 @@
   overflow-y: auto;
 }
 
-.input[type='checkbox'], label {
+input[type='checkbox'], label {
   user-select: none;
 }

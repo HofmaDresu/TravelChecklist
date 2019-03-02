@@ -1,0 +1,5 @@
+
+
+.checklist  input[type='checkbox']:checked + label {
+  color: gray
+}

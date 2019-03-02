@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ChecklistItems.css";
 
 function itemToChecklistItem(item) {
   return item ? (
@@ -47,7 +48,7 @@ class ChecklistItems extends Component {
 
     checklistItems = checklistItems.concat(singleOptionItems).concat(multiOptionItems).concat(alwaysItems).filter(item => item);
     return (
-      <div className="data-container">
+      <div className="data-container checklist">
         <h3>Checklist</h3>
         {checklistItems}
       </div>
