@@ -1,8 +1,29 @@
 import React, { Component } from "react";
 
+function itemToChecklistItem(item) {
+  return item ? (
+    <div key={item}>
+      <input type="checkbox" id={item} />
+      <label htmlFor={item}>{item}</label>
+    </div>
+  ) : null;
+}
+
 class ChecklistItems extends Component {
   render() {
     let checklistItems = [];
+
+    const singleOptionQD = this.props.questionData
+      .filter(qd => qd.type=== "single-option")
+
+    const singleOptionItems = singleOptionQD
+      .flatMap(qd => (qd.options.find(opt => opt.title === this.props.answerData[qd.title]) || {}).checklistItems)
+      .map(itemToChecklistItem);
+        
+        
+        
+        // (qd.options.find(qd => this.props.answerData[qd.title]) || {})["options"]);
+
     const alwaysItems = this.props.questionData
       .find(qd => qd.type === "always")
       .checklistItems.map(item => {
@@ -20,15 +41,10 @@ class ChecklistItems extends Component {
             Math.floor(nightsGone / 3 + 1)
           );
 
-        return (
-          <div key={item}>
-            <input type="checkbox" id={item} />
-            <label htmlFor={item}>{item}</label>
-          </div>
-        );
+        return itemToChecklistItem(item);
       });
 
-    checklistItems = checklistItems.concat(alwaysItems);
+    checklistItems = checklistItems.concat(singleOptionItems).concat(alwaysItems).filter(item => item);
     return (
       <div className="data-container">
         <h3>Checklist</h3>
