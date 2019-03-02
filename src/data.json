@@ -27,7 +27,6 @@
           "ID",
           "Pen",
           "Book(s)",
-          "Headphones",
           "Passport",
           "2 Copies of Passport"
         ]
@@ -37,8 +36,7 @@
         "checklistItems": [
           "Snack Food",
           "Water Bottle (filled)",
-          "Driver's License",
-          "Headphones"
+          "Driver's License"
         ]
       }
     ]
