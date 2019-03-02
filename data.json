@@ -1,0 +1,78 @@
+[
+    {
+        "type": "number",
+        "titleText": "How many nights are gone?"
+    },
+    {
+        "type": "single-option",
+        "titleText": "How are you traveling?",
+        "options": [
+            {
+                "title": "Flying Domestic",
+                "checklistItems": [
+                    "Water Bottle (empty)",
+                    "Book",
+                    "Tickets",
+                    "ID",
+                    "Pen",
+                    "Book(s)",
+                    "Headphones"
+                ]
+            },
+            {
+                "title": "Flying International",
+                "checklistItems": [
+                    "Water Bottle (empty)",
+                    "Book",
+                    "Tickets",
+                    "ID",
+                    "Pen",
+                    "Book(s)",
+                    "Headphones",
+                    "Passport",
+                    "2 Copies of Passport"
+                ]
+            },
+            {
+                "title": "Driving",
+                "checklistItems": [
+                    "Snack Food",
+                    "Water Bottle (filled)",
+                    "Driver's License",
+                    "Headphones"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "multi-option",
+        "titleText": "What will you be doing?",
+        "options": [
+            {
+                "title": "Swimming",
+                "checklistItems": [
+                    "Bathing Suit",
+                    "Towel"
+                ]
+            },
+            {
+                "title": "Working",
+                "checklistItems": [
+                    "Work Laptop",
+                    "Corporate Badge",
+                    "Ubi Key",
+                    "Corporate Phone",
+                    "Privacy Shield"
+                ]
+            },
+            {
+                "title": "Hiking (summer)",
+                "checklistItems": [
+                    "Hiking boots",
+                    "Backpack",
+                    "Trail food"
+                ]
+            }
+        ]
+    }
+]
