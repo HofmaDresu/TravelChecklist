@@ -15,8 +15,7 @@
                     "Tickets",
                     "ID",
                     "Pen",
-                    "Book(s)",
-                    "Headphones"
+                    "Book(s)"
                 ]
             },
             {
@@ -62,6 +61,7 @@
                     "Corporate Badge",
                     "Ubi Key",
                     "Corporate Phone",
+                    "Corporate Phone Charger",
                     "Privacy Shield"
                 ]
             },
@@ -73,6 +73,29 @@
                     "Trail food"
                 ]
             }
+        ]
+    },
+    {
+        "type": "always",
+        "checklistItems": [
+            "{nights} Shirts",
+            "{nights/3 + 1} Pants",
+            "{nights} Socks",
+            "{nights} Undergarments",
+            "Headphones",
+            "Phone",
+            "USB-C Charger",
+            "USB-B Charger",
+            "Battery Pack",
+            "Belt",
+            "Walking Shoes",
+            "Toothbrush",
+            "Toothpaste",
+            "Deodorant",
+            "Comb",
+            "Razer",
+            "Shaving Butter",
+            "Sleeping Clothes"
         ]
     }
 ]
