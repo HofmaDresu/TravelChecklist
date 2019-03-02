@@ -38,18 +38,28 @@ class App extends Component {
   }
   handleUpdateNumber(fieldName, number) {
     this.setState((oldState) => ({
-      answerData: Object.assign({}, oldState, { [fieldName]: number})
+      answerData: Object.assign({}, oldState.answerData, { [fieldName]: number})
     }));
   }
   handleUpdateSingleOption(fieldName, selectionKey) {
     this.setState((oldState) => ({
-      answerData: Object.assign({}, oldState, { [fieldName]: selectionKey})
+      answerData: Object.assign({}, oldState.answerData, { [fieldName]: selectionKey})
     }));
   }
-  handleUpdateMultiOption(fieldName, selectedKeys) {
-    this.setState((oldState) => ({
-      answerData: Object.assign({}, oldState, { [fieldName]: selectedKeys})
-    }));
+  handleUpdateMultiOption(fieldName, key) {
+    this.setState((oldState) => {
+      const selectedItems = oldState.answerData[fieldName] || [];
+
+      if(selectedItems.includes(key)) {
+        selectedItems.splice(selectedItems.indexOf(key), 1)
+      } else {
+        selectedItems.push(key);
+      }
+      
+      return {
+        answerData: Object.assign({}, oldState.answerData, { [fieldName]: selectedItems})
+      };
+    });
   }
   render() {
     return (

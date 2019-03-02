@@ -18,15 +18,15 @@ function getTravelOptionsInput(questionDatum, answerDatum, onUpdateNumber, onUpd
         </option>
       ));
       return (
-        <select className="travel-options" value={answerDatum} onChange={e => onUpdateSingle(questionDatum.title, e.target.selectedOptions[0].text)}>
-          <option>-- Select an option --</option>
+        <select className="travel-options" value={answerDatum || "-- Select an option --"} onChange={e => onUpdateSingle(questionDatum.title, e.target.selectedOptions[0].text)}>
+          <option value="-- Select an option --">-- Select an option --</option>
           {options}
         </select>);
     }
     case "multi-option": {
       const options = questionDatum.options.map(opt => (
         <div key={opt.title}>
-          <input type="checkbox" id={opt.title} />
+          <input type="checkbox" id={opt.title} checked={(answerDatum || []).includes(opt.title)} onChange={e => onUpdateMulti(questionDatum.title, opt.title)} />
           <label htmlFor={opt.title}>{opt.title}</label>
         </div>
       ));
