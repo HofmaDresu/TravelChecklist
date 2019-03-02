@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6a0d1926aa21ee4968ff",
+    "revision": "b4b6db942feb1ad7b4df",
     "url": "/TravelChecklist/static/css/main.9d72b54d.chunk.css"
   },
   {
-    "revision": "6a0d1926aa21ee4968ff",
-    "url": "/TravelChecklist/static/js/main.6a0d1926.chunk.js"
+    "revision": "b4b6db942feb1ad7b4df",
+    "url": "/TravelChecklist/static/js/main.b4b6db94.chunk.js"
   },
   {
     "revision": "07f7159cf48c0c3bbf9c",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/TravelChecklist/static/js/2.7f95b03e.chunk.js"
   },
   {
-    "revision": "3ac4668a31ea57a7a49a996fb8ec2391",
+    "revision": "ed185b8528259a3183a4218394b02080",
     "url": "/TravelChecklist/index.html"
   }
 ];
