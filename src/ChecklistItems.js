@@ -6,14 +6,18 @@ class ChecklistItems extends Component {
     const alwaysItems = this.props.questionData
       .find(qd => qd.type === "always")
       .checklistItems.map(item => {
+        const nightsGone = this.props.answerData["How many nights are you gone?"];
+
+        if(!nightsGone && item.includes("nights")) return null;
+
         item = item
           .replace(
             "{nights}",
-            Math.max(1, this.props.answerData["How many nights are you gone?"])
+            Math.max(1, nightsGone)
           )
           .replace(
             "{reusable-clothes-nights}",
-            Math.floor(this.props.answerData["How many nights are you gone?"] / 3 + 1)
+            Math.floor(nightsGone / 3 + 1)
           );
 
         return (
