@@ -39,8 +39,8 @@ export default class TravelOptions extends Component {
     });
     return (
         <div className="data-container">
-        <h3>Travel Options</h3>
-        {travelOptions}
+            <h3>Travel Options</h3>
+            {travelOptions}
         </div>
     );
   }
