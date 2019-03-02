@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TravelOptions from './TravelOptions';
 import './App.css';
 
 class App extends Component {
@@ -12,18 +13,10 @@ class App extends Component {
     }
   }
   render() {
-    const travelOptions = this.state.questionData.map(qd => (
-      <div>
-        <label>{qd.title}</label>
-      </div>
-    ));
     return (
       <div className="App">
         <div className="app-content">
-          <div className="data-container">
-            <h3>Travel Options</h3>
-            {travelOptions}
-          </div>
+          <TravelOptions {...(this.state)} />
           <div className="data-container">
           </div>
         </div>
