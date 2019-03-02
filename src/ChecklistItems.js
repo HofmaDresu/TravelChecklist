@@ -9,11 +9,11 @@ class ChecklistItems extends Component {
         item = item
           .replace(
             "{nights}",
-            Math.max(1, this.props["How many nights are you gone?"])
+            Math.max(1, this.props.answerData["How many nights are you gone?"])
           )
           .replace(
             "{reusable-clothes-nights}",
-            Math.floor(this.props["How many nights are you gone?"] / 3 + 1)
+            Math.floor(this.props.answerData["How many nights are you gone?"] / 3 + 1)
           );
 
         return (
