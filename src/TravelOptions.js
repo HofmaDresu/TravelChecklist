@@ -40,7 +40,7 @@ export default class TravelOptions extends Component {
       const options = getTravelOptionsInput(qd, matchingAnswerDatum, this.props.onUpdateNumber);
 
       return (
-        <div key={qd.title}>
+        <div key={qd.title || qd.type}>
           <h5>{qd.title}</h5>
           {options}
         </div>
