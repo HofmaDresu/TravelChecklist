@@ -38,7 +38,7 @@ class App extends Component {
   }
   handleUpdateNumber(fieldName, number) {
     this.setState((oldState) => ({
-      answerData: Object.assign({}, oldState.answerData, { [fieldName]: number})
+      answerData: Object.assign({}, oldState.answerData, { [fieldName]: Math.max(0, number)})
     }));
   }
   handleUpdateSingleOption(fieldName, selectionKey) {
