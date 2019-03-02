@@ -1,101 +1,95 @@
 [
-    {
-        "type": "number",
-        "title": "How many nights are you gone?"
-    },
-    {
-        "type": "single-option",
-        "title": "How are you traveling?",
-        "options": [
-            {
-                "title": "Flying Domestic",
-                "checklistItems": [
-                    "Water Bottle (empty)",
-                    "Book",
-                    "Tickets",
-                    "ID",
-                    "Pen",
-                    "Book(s)"
-                ]
-            },
-            {
-                "title": "Flying International",
-                "checklistItems": [
-                    "Water Bottle (empty)",
-                    "Book",
-                    "Tickets",
-                    "ID",
-                    "Pen",
-                    "Book(s)",
-                    "Headphones",
-                    "Passport",
-                    "2 Copies of Passport"
-                ]
-            },
-            {
-                "title": "Driving",
-                "checklistItems": [
-                    "Snack Food",
-                    "Water Bottle (filled)",
-                    "Driver's License",
-                    "Headphones"
-                ]
-            }
-        ]
-    },
-    {
-        "type": "multi-option",
-        "title": "What will you be doing?",
-        "options": [
-            {
-                "title": "Swimming",
-                "checklistItems": [
-                    "Bathing Suit",
-                    "Towel"
-                ]
-            },
-            {
-                "title": "Working",
-                "checklistItems": [
-                    "Work Laptop",
-                    "Corporate Badge",
-                    "Ubi Key",
-                    "Corporate Phone",
-                    "Corporate Phone Charger",
-                    "Privacy Shield"
-                ]
-            },
-            {
-                "title": "Hiking (summer)",
-                "checklistItems": [
-                    "Hiking boots",
-                    "Backpack",
-                    "Trail food"
-                ]
-            }
-        ]
-    },
-    {
-        "type": "always",
+  {
+    "type": "number",
+    "title": "How many nights are you gone?"
+  },
+  {
+    "type": "single-option",
+    "title": "How are you traveling?",
+    "options": [
+      {
+        "title": "Flying Domestic",
         "checklistItems": [
-            "{nights} Shirts",
-            "{nights/3 + 1} Pants",
-            "{nights} Socks",
-            "{nights} Undergarments",
-            "Headphones",
-            "Phone",
-            "USB-C Charger",
-            "USB-B Charger",
-            "Battery Pack",
-            "Belt",
-            "Walking Shoes",
-            "Toothbrush",
-            "Toothpaste",
-            "Deodorant",
-            "Comb",
-            "Razer",
-            "Shaving Butter",
-            "Sleeping Clothes"
+          "Water Bottle (empty)",
+          "Book",
+          "Tickets",
+          "ID",
+          "Pen",
+          "Book(s)"
         ]
-    }
+      },
+      {
+        "title": "Flying International",
+        "checklistItems": [
+          "Water Bottle (empty)",
+          "Book",
+          "Tickets",
+          "ID",
+          "Pen",
+          "Book(s)",
+          "Headphones",
+          "Passport",
+          "2 Copies of Passport"
+        ]
+      },
+      {
+        "title": "Driving",
+        "checklistItems": [
+          "Snack Food",
+          "Water Bottle (filled)",
+          "Driver's License",
+          "Headphones"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "multi-option",
+    "title": "What will you be doing?",
+    "options": [
+      {
+        "title": "Swimming",
+        "checklistItems": ["Bathing Suit", "Towel"]
+      },
+      {
+        "title": "Working",
+        "checklistItems": [
+          "Work Laptop",
+          "Corporate Badge",
+          "Ubi Key",
+          "Corporate Phone",
+          "Corporate Phone Charger",
+          "Privacy Shield"
+        ]
+      },
+      {
+        "title": "Hiking (summer)",
+        "checklistItems": ["Hiking boots", "Backpack", "Trail food"]
+      }
+    ]
+  },
+  {
+    "type": "always",
+    "checklistItems": [
+      "{nights} Shirts",
+      "{reusable-clothes-nights} Pants",
+      "{nights} Socks",
+      "{nights} Undergarments",
+      "Sweater",
+      "Headphones",
+      "Phone",
+      "USB-C Charger",
+      "USB-B Charger",
+      "Battery Pack",
+      "Belt",
+      "Walking Shoes",
+      "Toothbrush",
+      "Toothpaste",
+      "Deodorant",
+      "Comb",
+      "Razer",
+      "Shaving Butter",
+      "Sleeping Clothes"
+    ]
+  }
 ]
