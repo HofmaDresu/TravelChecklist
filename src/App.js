@@ -12,12 +12,23 @@ class App extends Component {
     this.state = {
       questionData
     };
+
+    this.handleUpdateNumber = this.handleUpdateNumber.bind(this);
+  }
+  handleUpdateNumber(fieldName, number) {
+    //todo: better state
+    this.setState({
+      [fieldName]: number
+    });
   }
   render() {
     return (
       <div className="App">
         <div className="app-content">
-          <TravelOptions {...this.state} />
+          <TravelOptions
+            {...this.state}
+            onUpdateNumber={this.handleUpdateNumber}
+          />
           <ChecklistItems {...this.state} />
         </div>
       </div>
