@@ -1,11 +1,11 @@
 [
     {
         "type": "number",
-        "titleText": "How many nights are gone?"
+        "title": "How many nights are you gone?"
     },
     {
         "type": "single-option",
-        "titleText": "How are you traveling?",
+        "title": "How are you traveling?",
         "options": [
             {
                 "title": "Flying Domestic",
@@ -46,7 +46,7 @@
     },
     {
         "type": "multi-option",
-        "titleText": "What will you be doing?",
+        "title": "What will you be doing?",
         "options": [
             {
                 "title": "Swimming",
