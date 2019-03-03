@@ -11,18 +11,17 @@
         "title": "Flying Domestic",
         "checklistItems": [
           "Water Bottle (empty)",
-          "Book",
           "Tickets",
           "ID",
           "Pen",
-          "Book(s)"
+          "Book(s)",
+          "Empty Carry-on Bag"
         ]
       },
       {
         "title": "Flying International",
         "checklistItems": [
           "Water Bottle (empty)",
-          "Book",
           "Tickets",
           "ID",
           "Pen",
@@ -60,12 +59,13 @@
           "Ubi Key",
           "Corporate Phone",
           "Corporate Phone Charger",
-          "Privacy Shield"
+          "Privacy Shield",
+          "Laptop Stand"
         ]
       },
       {
-        "title": "Hiking (summer)",
-        "checklistItems": ["Hiking boots", "Backpack", "Trail food"]
+        "title": "Climbing",
+        "checklistItems": ["Shoes", "Harness", "Chalk"]
       }
     ]
   },
