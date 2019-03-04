@@ -70,7 +70,16 @@ class ChecklistItems extends Component {
         return itemToChecklistItem(item, this.state.checkedItems.includes(item), this.handleCheckedChanged);
       });
 
-    checklistItems = checklistItems.concat(singleOptionItems).concat(multiOptionItems).concat(alwaysItems).filter(item => item).sort();
+    checklistItems = checklistItems.concat(singleOptionItems).concat(multiOptionItems).concat(alwaysItems).filter(item => item);
+    checklistItems.sort((item1, item2) => {
+      if (!this.state.checkedItems.includes(item1.key) && this.state.checkedItems.includes(item2.key)) {
+        return -1;
+      }
+      if (this.state.checkedItems.includes(item1.key) && !this.state.checkedItems.includes(item2.key)) {
+        return 1;
+      }
+      return 0;
+    });
     return (
       <div className="data-container checklist">
         <h3>Checklist</h3>
