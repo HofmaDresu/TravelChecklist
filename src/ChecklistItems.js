@@ -1,30 +1,54 @@
 import React, { Component } from "react";
 import "./ChecklistItems.css";
 
-function itemToChecklistItem(item) {
+function itemToChecklistItem(item, isChecked, onCheckedChanged) {
   return item ? (
     <div key={item}>
-      <input type="checkbox" id={item} />
+      <input type="checkbox" id={item} checked={isChecked} onChange={e => onCheckedChanged(item)} />
       <label htmlFor={item}>{item}</label>
     </div>
   ) : null;
 }
 
 class ChecklistItems extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      checkedItems: [],
+    };
+
+    this.handleCheckedChanged = this.handleCheckedChanged.bind(this);
+  }
+  handleCheckedChanged(item) {
+    this.setState((oldState) => {
+      const checkedItems = oldState.checkedItems || [];
+
+      if(checkedItems.includes(item)) {
+        checkedItems.splice(checkedItems.indexOf(item), 1)
+      } else {
+        checkedItems.push(item);
+      }
+      
+      return {
+        answerData: Object.assign({}, oldState, { checkedItems })
+      };
+    });
+  }
   render() {
     let checklistItems = [];
 
     const singleOptionItems = this.props.questionData
       .filter(qd => qd.type=== "single-option")
       .flatMap(qd => (qd.options.find(opt => opt.title === this.props.answerData[qd.title]) || {}).checklistItems)
-      .map(itemToChecklistItem);
+      .map(i => itemToChecklistItem(i, this.state.checkedItems.includes(i), this.handleCheckedChanged));
 
     const multiOptionItems = this.props.questionData
       .filter(qd => qd.type=== "multi-option")
       .flatMap(qd => (
         qd.options.filter(opt => (this.props.answerData[qd.title] || []).includes(opt.title)
           ) || {}).flatMap(opt => opt.checklistItems))
-      .map(itemToChecklistItem);
+      .map(i => itemToChecklistItem(i, this.state.checkedItems.includes(i), this.handleCheckedChanged));
 
     const alwaysItems = this.props.questionData
       .find(qd => qd.type === "always")
@@ -43,10 +67,10 @@ class ChecklistItems extends Component {
             Math.floor(nightsGone / 3 + 1)
           );
 
-        return itemToChecklistItem(item);
+        return itemToChecklistItem(item, this.state.checkedItems.includes(item), this.handleCheckedChanged);
       });
 
-    checklistItems = checklistItems.concat(singleOptionItems).concat(multiOptionItems).concat(alwaysItems).filter(item => item);
+    checklistItems = checklistItems.concat(singleOptionItems).concat(multiOptionItems).concat(alwaysItems).filter(item => item).sort();
     return (
       <div className="data-container checklist">
         <h3>Checklist</h3>
